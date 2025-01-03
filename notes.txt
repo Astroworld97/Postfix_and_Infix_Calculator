@@ -1,9 +1,0 @@
-stack.pop() vs stack.top():
-
-In C++, the std::stack::pop function does not return a value. 
-It simply removes the top element from the stack. 
-If you want to access the value of the top element before removing it, you should use the std::stack::top method.
-
-std::stack::top() in C++ does not delete the top element of the stack. 
-It only provides a reference to the value of the top element without modifying the stack.
-If you want to remove the top element, you need to explicitly call std::stack::pop() after accessing the value using top().

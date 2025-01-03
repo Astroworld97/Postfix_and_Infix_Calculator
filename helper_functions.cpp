@@ -2,13 +2,6 @@
 #include <stack>
 using namespace std;
 
-void printCharFromString()
-{
-    string fruit = "banana";
-    char letter = fruit[1];
-    cout << letter << endl;
-}
-
 bool isDelim(char c)
 {
     if (c == '{' || c == '}' || c == '[' || c == ']' || c == '(' || c == ')')
@@ -75,8 +68,9 @@ bool isBalanced(string inputStr)
             if(balancingStack.empty()){
                 return false;
             }else{
-                balancingStack.top();
-
+                char testLeftDelim = balancingStack.top();
+                balancingStack.pop();
+                return matchesDelim(testLeftDelim, currChar);
             }
         }
     }
@@ -84,8 +78,3 @@ bool isBalanced(string inputStr)
     return false;
 }
 
-int main()
-{
-    // printCharFromString();
-    cout << isalnum('a');
-}

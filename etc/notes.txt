@@ -1,0 +1,32 @@
+stack.pop() vs stack.top():
+
+In C++, the std::stack::pop function does not return a value. 
+It simply removes the top element from the stack. 
+If you want to access the value of the top element before removing it, you should use the std::stack::top method.
+
+std::stack::top() in C++ does not delete the top element of the stack. 
+It only provides a reference to the value of the top element without modifying the stack.
+If you want to remove the top element, you need to explicitly call std::stack::pop() after accessing the value using top().
+
+std::stack in C++ does not have a peek() method. 
+However, the std::stack::top() method serves the same purpose as a "peek" function in other languages. 
+
+If you store the value of the top element using std::stack::top() and then call std::stack::pop(), 
+it works perfectly fine. 
+Since top() returns a reference to the top element, 
+storing it in a variable before calling pop() ensures that you retain the value of the top element 
+even after it is removed from the stack.
+
+
+Ternary operator review:
+
+example:
+int max = (a > b) ? a : b;
+
+equivalent if-else statement:
+int max;
+if (a > b) {
+    max = a;
+} else {
+    max = b;
+}
