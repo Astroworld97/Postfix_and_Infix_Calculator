@@ -12,9 +12,9 @@ bool isDelim(char c)
     return false;
 }
 
-bool isOperator(char c)
+bool isOperatorExcludingExponent(char c)
 {
-    if (c == '^' || c == '*' || c == '/' || c == '+' || c == '-')
+    if (c == '*' || c == '/' || c == '+' || c == '-')
     {
         return true;
     }

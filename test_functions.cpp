@@ -10,11 +10,11 @@ void testIsDelim() {
     cout << endl;
 }
 
-void testIsOperator() {
+void testIsOperatorExcludingExponent() {
     cout << "Testing isOperator:" << endl;
-    cout << (isOperator('+') ? "Pass" : "Fail") << endl;
-    cout << (isOperator('-') ? "Pass" : "Fail") << endl;
-    cout << (isOperator('a') ? "Fail" : "Pass") << endl;
+    cout << (isOperatorExcludingExponent('+') ? "Pass" : "Fail") << endl;
+    cout << (isOperatorExcludingExponent('-') ? "Pass" : "Fail") << endl;
+    cout << (isOperatorExcludingExponent('a') ? "Fail" : "Pass") << endl;
     cout << endl;
 }
 
