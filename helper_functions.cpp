@@ -56,18 +56,21 @@ bool isBalanced(string inputStr)
 {
     stack<char> balancingStack;
     char currChar;
-    for(int i=0; i<inputStr.length(); i++)
+    for (int i = 0; i < inputStr.length(); i++)
     {
         currChar = inputStr[i];
-        if(isLeftDelim(currChar))
+        if (isLeftDelim(currChar))
         {
             balancingStack.push(currChar);
         }
-        if(isRightDelim(currChar))
+        if (isRightDelim(currChar))
         {
-            if(balancingStack.empty()){
+            if (balancingStack.empty())
+            {
                 return false;
-            }else{
+            }
+            else
+            {
                 char testLeftDelim = balancingStack.top();
                 balancingStack.pop();
                 return matchesDelim(testLeftDelim, currChar);
@@ -78,3 +81,14 @@ bool isBalanced(string inputStr)
     return false;
 }
 
+int arithmeticPrecedence(char c)
+{
+    if (c == '*' || c == '/')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
