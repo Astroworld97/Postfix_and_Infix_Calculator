@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "test_functions.h"
 using namespace std;
 
 int mainMenu()
@@ -30,14 +31,20 @@ vector<string> parseInputString(string s)
     return retval;
 }
 
-int main(){
-    string testStr = "See your money wanna stay for your meal";
-    vector<string> testVect = parseInputString(testStr);
-    for (string i : testVect){
-        cout << i + "\n";
-    }
+int main()
+{
+    testAllFunctions();
     return 0;
 }
+
+// int main(){
+//     string testStr = "See your money wanna stay for your meal";
+//     vector<string> testVect = parseInputString(testStr);
+//     for (string i : testVect){
+//         cout << i + "\n";
+//     }
+//     return 0;
+// }
 
 //actual main function below
 

@@ -104,6 +104,11 @@ string convertInfixToPostfix(string infixString)
     string postfixString = "";
     char currChar;
     char topOperator;
+
+    if(infixString == ""){
+        return "";
+    }
+
     for(int i=0; i<infixString.length(); i++)
     {
         currChar = infixString[i];
