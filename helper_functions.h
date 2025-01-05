@@ -10,5 +10,6 @@ bool isRightDelim(char c);
 bool matchesDelim(char c1, char c2);
 bool isBalanced(string inputStr);
 int arithmeticPrecedence(char c);
+string convertInfixToPostfix(string infixString);
 
 #endif
